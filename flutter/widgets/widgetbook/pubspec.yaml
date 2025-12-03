@@ -28,3 +28,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/home.jpeg
+    - assets/icons/tick_icon.png

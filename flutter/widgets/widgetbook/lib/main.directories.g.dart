@@ -10,18 +10,52 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:mechanix_widgetbook/widgets/BottomBar/bottom_bar.dart'
+    as _mechanix_widgetbook_widgets_BottomBar_bottom_bar;
+import 'package:mechanix_widgetbook/widgets/BottomSheet/bottom_sheet.dart'
+    as _mechanix_widgetbook_widgets_BottomSheet_bottom_sheet;
 import 'package:mechanix_widgetbook/widgets/FloatingActionBar/floating_action_bar.dart'
     as _mechanix_widgetbook_widgets_FloatingActionBar_floating_action_bar;
 import 'package:mechanix_widgetbook/widgets/FloatingActionBar/floating_action_bar_wihtout_button.dart'
     as _mechanix_widgetbook_widgets_FloatingActionBar_floating_action_bar_wihtout_button;
-import 'package:mechanix_widgetbook/widgets/menu.dart'
-    as _mechanix_widgetbook_widgets_menu;
+import 'package:mechanix_widgetbook/widgets/Menu/menu.dart'
+    as _mechanix_widgetbook_widgets_Menu_menu;
 import 'package:widgetbook/widgetbook.dart' as _widgetbook;
 
 final directories = <_widgetbook.WidgetbookNode>[
   _widgetbook.WidgetbookFolder(
     name: 'widgets',
     children: [
+      _widgetbook.WidgetbookFolder(
+        name: 'bottomBar',
+        children: [
+          _widgetbook.WidgetbookComponent(
+            name: 'MechanixBottomBar',
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'Bottom Bar',
+                builder: _mechanix_widgetbook_widgets_BottomBar_bottom_bar
+                    .buildMenuUseCase,
+              ),
+            ],
+          ),
+        ],
+      ),
+      _widgetbook.WidgetbookFolder(
+        name: 'bottomSheetModals',
+        children: [
+          _widgetbook.WidgetbookComponent(
+            name: 'MechanixBottomSheet',
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'Bottom Sheet',
+                builder: _mechanix_widgetbook_widgets_BottomSheet_bottom_sheet
+                    .buildMenuUseCase,
+              ),
+            ],
+          ),
+        ],
+      ),
       _widgetbook.WidgetbookFolder(
         name: 'floating_action_bar',
         children: [
@@ -52,7 +86,8 @@ final directories = <_widgetbook.WidgetbookNode>[
             useCases: [
               _widgetbook.WidgetbookUseCase(
                 name: 'Menu',
-                builder: _mechanix_widgetbook_widgets_menu.buildMenuUseCase,
+                builder:
+                    _mechanix_widgetbook_widgets_Menu_menu.buildMenuUseCase,
               ),
             ],
           ),
