@@ -18,8 +18,12 @@ import 'package:mechanix_widgetbook/widgets/FloatingActionBar/floating_action_ba
     as _mechanix_widgetbook_widgets_FloatingActionBar_floating_action_bar;
 import 'package:mechanix_widgetbook/widgets/FloatingActionBar/floating_action_bar_wihtout_button.dart'
     as _mechanix_widgetbook_widgets_FloatingActionBar_floating_action_bar_wihtout_button;
+import 'package:mechanix_widgetbook/widgets/menu.dart'
+    as _mechanix_widgetbook_widgets_menu;
 import 'package:mechanix_widgetbook/widgets/Menu/menu.dart'
     as _mechanix_widgetbook_widgets_Menu_menu;
+import 'package:mechanix_widgetbook/widgets/searchBar/search_bar.dart'
+    as _mechanix_widgetbook_widgets_searchBar_search_bar;
 import 'package:widgetbook/widgetbook.dart' as _widgetbook;
 
 final directories = <_widgetbook.WidgetbookNode>[
@@ -85,9 +89,28 @@ final directories = <_widgetbook.WidgetbookNode>[
             name: 'MechanixMenu',
             useCases: [
               _widgetbook.WidgetbookUseCase(
-                name: 'Menu',
+                name: 'Mechanix Menu',
                 builder:
                     _mechanix_widgetbook_widgets_Menu_menu.buildMenuUseCase,
+              ),
+              _widgetbook.WidgetbookUseCase(
+                name: 'Menu',
+                builder: _mechanix_widgetbook_widgets_menu.buildMenuUseCase,
+              ),
+            ],
+          ),
+        ],
+      ),
+      _widgetbook.WidgetbookFolder(
+        name: 'search_bar',
+        children: [
+          _widgetbook.WidgetbookComponent(
+            name: 'MechanixSearchBar',
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'Search Bar',
+                builder: _mechanix_widgetbook_widgets_searchBar_search_bar
+                    .buildMenuUseCase,
               ),
             ],
           ),
