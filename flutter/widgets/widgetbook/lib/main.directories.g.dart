@@ -14,6 +14,8 @@ import 'package:mechanix_widgetbook/widgets/BottomBar/bottom_bar.dart'
     as _mechanix_widgetbook_widgets_BottomBar_bottom_bar;
 import 'package:mechanix_widgetbook/widgets/BottomSheet/bottom_sheet.dart'
     as _mechanix_widgetbook_widgets_BottomSheet_bottom_sheet;
+import 'package:mechanix_widgetbook/widgets/FilledButton/filled_button.dart'
+    as _mechanix_widgetbook_widgets_FilledButton_filled_button;
 import 'package:mechanix_widgetbook/widgets/FloatingActionBar/floating_action_bar.dart'
     as _mechanix_widgetbook_widgets_FloatingActionBar_floating_action_bar;
 import 'package:mechanix_widgetbook/widgets/FloatingActionBar/floating_action_bar_wihtout_button.dart'
@@ -30,6 +32,16 @@ final directories = <_widgetbook.WidgetbookNode>[
   _widgetbook.WidgetbookFolder(
     name: 'widgets',
     children: [
+      _widgetbook.WidgetbookComponent(
+        name: 'MechanixElevatedButton',
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'Filled Button',
+            builder: _mechanix_widgetbook_widgets_FilledButton_filled_button
+                .buildFilledButtonUseCase,
+          ),
+        ],
+      ),
       _widgetbook.WidgetbookFolder(
         name: 'bottomBar',
         children: [
